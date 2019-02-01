@@ -1,0 +1,73 @@
+---
+layout: default
+home-title: Data to Art
+description: 去创造，去体验
+---
+
+{% include header.html %}
+<!-- <div class="g-banner tags-banner {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }}"
+    data-theme="{{ site.theme-color }}">
+    <h2>TAGS</h2>
+</div> -->
+
+<div class="g-banner home-banner {{ site.theme-color | prepend: 'banner-theme-' }}" data-theme="{{ site.theme-color }}"
+    style="background: url(http://data2art.com/assets/blog-img/sky.jpg) no-repeat center center; background-size: cover;">
+    <h2>{{ page.home-title }}</h2>
+    <h3>{{ page.description }}</h3>
+</div>
+
+<main class="g-container home-content">
+    <div class="article-list">
+        <article class="article-item">
+        Hi! 我是游薪渝。
+        </article>
+    </div>
+
+    <aside class="g-sidebar-wrapper">
+        <div class="g-sidebar">
+            <section class="author-card">
+                <div class="avatar">
+                    <img src="{{ site.avatar | prepend: site.baseurl }}" alt="">
+                </div>
+                <div class="author-name" rel="author">{{ site.author }}</div>
+                <div class="bio">
+                    <p>{{ site.bio }}</p>
+                </div>
+                {% if site.sns.size > 0 %}
+                <ul id="sns-links" class="sns-links">
+                    {% for s in site.sns %}
+                    <li>
+                        <a href="{{ s[1] }}" target="_blank">
+                            <i class="iconfont icon-{{ s[0] }}"></i>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </section>
+
+            {% if site.recommend-tags and site.tags.size>0 %}
+            <section class="tags-card">
+                {% for tag in site.tags %}
+                {% if forloop.index > site.recommend-condition-size %}
+                {% break %}
+                {% endif %}
+                <a href="{{ "tags.html#" | append: tag[0] | prepend: site.baseurl }}" class="tag">{{ tag[0]}}</a>
+                {% endfor %}
+            </section>
+            {% endif %}
+        </div>
+
+        {% if site.search %}
+        <div class="search-card">
+            <input id="search_input" type="text" placeholder="Search..." autocomplete="off">
+            <i class="iconfont icon-search"></i>
+            <div class="search_result"></div>
+        </div>
+        {% endif %}
+
+    </aside>
+
+</main>
+
+{% include footer.html %}
