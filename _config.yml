@@ -80,3 +80,9 @@ permalink: /:title.html
 
 # Plugins
 plugins: [jekyll-paginate]
+
+# Reading Count
+leancloud:
+  enable: true
+  app_id: 6v9M58wsB6UX9x6xOtd4dX7J-gzGzoHsz
+  app_key: 3ALzySnLoBlnJfRdyNVR0BAt
