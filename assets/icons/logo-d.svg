@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="88px" height="101px" viewBox="0 0 88 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="317px" height="101px" viewBox="0 0 317 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
     <title>Group 4</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-296.000000, -778.000000)">
-            <g id="Group-4" transform="translate(296.000000, 772.000000)">
+        <g id="Artboard" transform="translate(-233.000000, -786.000000)">
+            <g id="Group-4" transform="translate(233.000000, 780.000000)">
                 <g id="Group">
                     <polygon id="Rectangle" fill="#3385D9" transform="translate(26.828958, 56.538800) rotate(18.000000) translate(-26.828958, -56.538800) " points="17.5419602 6.93199136 37.0211259 1.08673375 35.1633705 105.971216 16.6367907 111.990866"></polygon>
                     <polygon id="Rectangle" fill="#D7E8F6" transform="translate(60.561373, 56.615349) scale(-1, 1) rotate(18.000000) translate(-60.561373, -56.615349) " points="51.5451494 6.97284388 70.9555937 0.666008205 68.2291013 106.696007 50.167152 112.56469"></polygon>
                     <polygon id="Rectangle" fill="#99C1EC" transform="translate(45.087520, 83.955121) scale(-1, -1) rotate(53.000000) translate(-45.087520, -83.955121) " points="36.8988096 58.1553432 54.336404 35.0148738 54.1574346 132.895367 35.8386363 127.2327"></polygon>
                 </g>
+                <text id="Data2Art" font-family="ToppanBunkyuMidashiGothicStdN-ExtraBold, Toppan Bunkyu Midashi Gothic" font-size="50" font-weight="600" letter-spacing="-0.301470786" fill="#4A90E2">
+                    <tspan x="97.4808831" y="78">Data2Art</tspan>
+                </text>
             </g>
         </g>
     </g>

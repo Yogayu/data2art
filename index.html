@@ -1,7 +1,7 @@
 ---
 layout: default
 home-title: Data to Art
-description: 去创造，去体验
+description: 探索技术本质，分享自在真我。
 ---
 
 {% include header.html %}
@@ -9,7 +9,7 @@ description: 去创造，去体验
 <div
     class="g-banner home-banner {{ site.theme-color | prepend: 'banner-theme-' }}"
     data-theme="{{ site.theme-color }}"
-    style="background: url(http://data2art.com/assets/blog-img/sky.jpg) no-repeat center center; background-size: cover;"
+    style="background: url(https://images.unsplash.com/flagged/photo-1551530891-42836e528e0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80) no-repeat center center; background-size: cover;"
 >
     <h2>{{ page.home-title }}</h2>
     <h3>{{ page.description }}</h3>
@@ -32,7 +32,11 @@ description: 去创造，去体验
                     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
                     {% endif %}
                     {% if post.subtitle.size==0 or post.subtitle==nil %}
-                    <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 126}}</p>
+                        {% if post.description.size>100 %}
+                        <p class="post-excerpt">{{ post.description }}</p>
+                        {% else %}
+                        <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 220}}</p>                        
+                        {% endif %}
                     {% endif %}
                 </section>
                 <footer class="post-meta">
@@ -85,6 +89,13 @@ description: 去创造，去体验
                     {% endif %}
                     <a href="{{ "tags.html#" | append: tag[0] | prepend: site.baseurl }}" class="tag">{{ tag[0]}}</a>
                 {% endfor %}
+            </section>
+            {% endif %}
+            {% if site.qr %}
+            <section class="author-card">
+                <div>
+                    <img src= "{{ site.qrcode | absolute_url }}" style="width:160px;height:160px;">
+                </div>
             </section>
             {% endif %}
         </div>

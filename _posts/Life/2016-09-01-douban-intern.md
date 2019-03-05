@@ -7,6 +7,8 @@ keywords: douban intern 豆瓣实习
 description: 豆瓣实习记录
 image: false
 time: 10
+author: 游薪渝
+bio: '去创造，去体验。<br> To create, To experience.'
 tags: [Life]
 ---
 

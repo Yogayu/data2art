@@ -4,6 +4,8 @@ lang: en
 ref: english
 title: 去创造，去体验
 time: 8
+author: 游薪渝
+bio: '去创造，去体验。<br> To create, To experience.'
 image: false
 tags: [Life]
 ---

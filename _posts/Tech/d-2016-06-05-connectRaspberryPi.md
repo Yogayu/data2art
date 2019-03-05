@@ -4,6 +4,8 @@ lang: en
 title: 校园网无路由器无显示器情况下使用树莓派
 image: false
 time: 8
+author: 游薪渝
+bio: '去创造，去体验。<br> To create, To experience.'
 tags: [Tech]
 ---
 

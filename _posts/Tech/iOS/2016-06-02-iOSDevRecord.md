@@ -5,6 +5,8 @@ title: iOS 独立开发记录
 keywords: iOS, 独立开发
 description: 这篇总结，概览了iOS独立开发从想法、设计、开发到最终发布的过程。
 image: false
+author: 游薪渝
+bio: '去创造，去体验。<br> To create, To experience.'
 time: 15
 tags: [iOS]
 ---

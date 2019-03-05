@@ -50,8 +50,9 @@
 
     <article class="markdown-body">
       {{ page.content }}
+      <br>
+      <img src="/assets/img/qrcode-share.png">
     </article>
-
     {% if site.social-share %}
     <div class="social-share-wrapper">
       <div class="social-share"></div>
@@ -64,9 +65,9 @@
       <div class="avatar">
         <img src="{{ site.avatar | absolute_url }}" alt="">
       </div>
-      <div class="author-name" rel="author">{{ site.author }}</div>
+      <div class="author-name" rel="author">{{ page.author }}</div>
       <div class="bio">
-        <p>{{ site.bio }}</p>
+        <p>{{ page.bio }}</p>
       </div>
       {% if site.sns.size > 0 %}
       <ul class="sns-links">

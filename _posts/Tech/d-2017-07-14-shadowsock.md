@@ -8,6 +8,8 @@ keywords: Shadowsocks, 翻墙
 description: 在服务器上搭建Shadowsocks以实现网络自由
 image: false
 tags: [Tech]
+author: 游薪渝
+bio: '去创造，去体验。<br> To create, To experience.'
 ---
 
 # 在服务器上搭建Shadowsocks以实现网络自由

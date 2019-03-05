@@ -1,7 +1,7 @@
 # Site settings 配置站点
-title: '游薪渝的独立博客'
-description: '去创造，去体验'
-keyword: '游薪渝, 游薪渝的独立博客, 游薪渝的博客, iOS, Azureyu, azureyu, yogayu, iOS入门'
+title: 'Data2Art.com'
+description: '探索技术本质，分享自在真我'
+keyword: '数据科学, 游薪渝, 游薪渝的博客, 王仁敏, iOS, azureyu, yogayu'
 url: 'http://data2art.com'
 
 # if you don't need baseurl, you should leave this value blank.
@@ -12,16 +12,21 @@ nav:
   home: '/'
   tags: '/tags.html'
   about: '/about.html'
+  RSS: '/rss.xml'
 
 # Footer
 footer:
   since: 2014
 
 # Author 配置博主信息
-author: '游薪渝'
-nickname: '游薪渝'
-bio: '去创造，去体验。<br> To create, To experience.'
+author: 'Data2Art'
+nickname: 'Data2Art'
+bio: '探索技术本质，分享自在真我。<br> Exploring the nature of technology, Sharing the authentic self.'
 avatar: '/assets/img/profile.jpg'
+qrcode: '/assets/img/qrcode.jpg'
+
+# qrcode
+qr: true
 
 # Search
 search: true
@@ -42,7 +47,7 @@ social-share: true
 social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
 
 # theme color 主题皮肤
-theme-color: 'pink'  # pink or default
+theme-color: 'default'  # pink or default
 
 # Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
 postPatterns: 'circuitBoard'

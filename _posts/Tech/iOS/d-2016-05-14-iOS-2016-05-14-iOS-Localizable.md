@@ -5,6 +5,8 @@ title: 让你的App说出多国语言——iOS开发之本地化(国际化)
 keywords: iOS, 本地化, 国际化
 description: iOS开发之本地化
 time: 10
+author: 游薪渝
+bio: '去创造，去体验。<br> To create, To experience.'
 image: false
 tags: [iOS]
 ---

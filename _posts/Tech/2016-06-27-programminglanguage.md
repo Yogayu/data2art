@@ -6,6 +6,8 @@ keywords: 编程语言, 语言设计
 description: 编程语言的思考Thinking of the Programming Language
 image: false
 time: 8
+author: 游薪渝
+bio: '去创造，去体验。<br> To create, To experience.'
 tags: [Tech]
 ---
 
