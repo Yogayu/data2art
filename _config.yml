@@ -11,7 +11,8 @@ baseurl: ''
 nav:
   home: '/'
   tags: '/tags.html'
-  about: '/about.html'
+  about: 'http://youxinyu.me'
+  关于我: '/about-zh.html'
   RSS: '/rss.xml'
 
 # Footer
