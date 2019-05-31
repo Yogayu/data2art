@@ -11,6 +11,7 @@ baseurl: ''
 nav:
   home: '/'
   tags: '/tags.html'
+  GSoC: '/gsocBlog.html'
   about: 'http://youxinyu.me'
   关于我: '/about-zh.html'
   RSS: '/rss.xml'

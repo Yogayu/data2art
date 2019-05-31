@@ -1,0 +1,26 @@
+---
+title: Tags
+layout: default
+---
+
+{% include header.html %}
+
+<div class="g-banner tags-banner {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }}" data-theme="{{ site.theme-color }}">
+    <h2>GSoC</h2>
+</div>
+
+<main class="tags-content">
+    <ul class="tags-list">
+        {% for tag in site.tags %}
+            {% if tag[0] == "GSoC" %}
+            <li>
+                {% for post in tag[1] %}
+                    <a class="tag-post" href="{{ post.url }}" title="{{ post.title }}"><span><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y/%m/%d" }}</time></span> {{ post.title }}</a>
+                {% endfor %}
+            </li>
+            {% endif %}
+        {% endfor%}
+    </ul>
+</main>
+    
+{% include footer.html %}
