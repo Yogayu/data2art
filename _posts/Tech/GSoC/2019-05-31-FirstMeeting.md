@@ -1,14 +1,14 @@
 ---
-layout: post
+layout: post-c
 lang: en
-title: """[GSoC 2019] First excited meeting"""
+title: GSoC 2019 - First wonderful meeting
 keywords: GSoC 2019, Red Hen Lab, Deep Learning Course, GSoC Blog
-description: 
+description: First wonderful meeting with the professor Steen.
 tags: [GSoC]
 catgray: [GSoC]
-author: XinyuYou
+author: Xinyu You
 bio: 'To create, To experience.'
-postPatterns: 'circuitBoard'
+cover: /assets/img/gsoc/logo.png
 ---
 
 Very exciting to complete the first video meeting with the professor Steen! We had an hour-long discussion about various aspects of the course project. The professor Steen is so nice. When I didn't catch some words, he would be thoughtful to type in the chat box. 
