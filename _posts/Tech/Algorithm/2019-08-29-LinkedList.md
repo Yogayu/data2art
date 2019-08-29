@@ -278,61 +278,61 @@ def hasCycle(self, head):
 ![](/assets/img/linkedlist/ls.png)
 
 ```python
-    # Definition for singly-linked list.
-    # class ListNode(object):
-    #     def __init__(self, x):
-    #         self.val = x
-    #         self.next = None
-    
-    class Solution(object):
-        def detectCycle(self, head):
-            fast, slow = head, head
-            while True:
-                if not (fast and fast.next): return
-                fast, slow = fast.next.next, slow.next
-                if fast == slow:
-                    break
-            fast = head
-            while fast != slow:
-                fast, slow = fast.next, slow.next
-            return fast
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
 
-    class Solution(object):
-        def getIntersect(self, head):
-            tortoise = head
-            hare = head
-    
-            # A fast pointer will either loop around a cycle and meet the slow
-            # pointer or reach the `null` at the end of a non-cyclic list.
-            while hare is not None and hare.next is not None:
-                tortoise = tortoise.next
-                hare = hare.next.next
-                if tortoise == hare:
-                    return tortoise
-    
+class Solution(object):
+    def detectCycle(self, head):
+        fast, slow = head, head
+        while True:
+            if not (fast and fast.next): return
+            fast, slow = fast.next.next, slow.next
+            if fast == slow:
+                break
+        fast = head
+        while fast != slow:
+            fast, slow = fast.next, slow.next
+        return fast
+
+class Solution(object):
+    def getIntersect(self, head):
+        tortoise = head
+        hare = head
+
+        # A fast pointer will either loop around a cycle and meet the slow
+        # pointer or reach the `null` at the end of a non-cyclic list.
+        while hare is not None and hare.next is not None:
+            tortoise = tortoise.next
+            hare = hare.next.next
+            if tortoise == hare:
+                return tortoise
+
+        return None
+
+    def detectCycle(self, head):
+        if head is None:
             return None
-    
-        def detectCycle(self, head):
-            if head is None:
-                return None
-    
-            # If there is a cycle, the fast/slow pointers will intersect at some
-            # node. Otherwise, there is no cycle, so we cannot find an enterance to
-            # a cycle.
-            intersect = self.getIntersect(head)
-            if intersect is None:
-                return None
-    
-            # To find the enterance to the cycle, we have two pointers traverse at
-            # the same speed -- one from the front of the list, and the other from
-            # the point of intersection.
-            ptr1 = head
-            ptr2 = intersect
-            while ptr1 != ptr2:
-                ptr1 = ptr1.next
-                ptr2 = ptr2.next
-    
-            return ptr1
+
+        # If there is a cycle, the fast/slow pointers will intersect at some
+        # node. Otherwise, there is no cycle, so we cannot find an enterance to
+        # a cycle.
+        intersect = self.getIntersect(head)
+        if intersect is None:
+            return None
+
+        # To find the enterance to the cycle, we have two pointers traverse at
+        # the same speed -- one from the front of the list, and the other from
+        # the point of intersection.
+        ptr1 = head
+        ptr2 = intersect
+        while ptr1 != ptr2:
+            ptr1 = ptr1.next
+            ptr2 = ptr2.next
+
+        return ptr1
 ```
 ### 哈希
 
@@ -340,19 +340,19 @@ def hasCycle(self, head):
 
 时间，空间复杂度均为O(n)。
 ```python
-    class Solution(object):
-        def detectCycle(self, head):
-            visited = set()
-    
-            node = head
-            while node is not None:
-                if node in visited:
-                    return node
-                else:
-                    visited.add(node)
-                    node = node.next
-    
-            return None
+class Solution(object):
+    def detectCycle(self, head):
+        visited = set()
+
+        node = head
+        while node is not None:
+            if node in visited:
+                return node
+            else:
+                visited.add(node)
+                node = node.next
+
+        return None
 ```
 ## 160. 相交链表（两个链表交点）
 链接：https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
@@ -373,13 +373,13 @@ A和B要从距离末尾同等距离的位置开始遍历，才能相交。这个
 
 ![](/assets/img/linkedlist/Untitled-c9cb0bd6-c60a-4ada-8f46-0ecd3afeb8e1.png)
 ```python
-    class Solution(object):
-        def getIntersectionNode(self, headA, headB):
-            ha, hb = headA, headB
-            while ha != hb:
-                ha = ha.next if ha else headB
-                hb = hb.next if hb else headA
-            return ha
+class Solution(object):
+    def getIntersectionNode(self, headA, headB):
+        ha, hb = headA, headB
+        while ha != hb:
+            ha = ha.next if ha else headB
+            hb = hb.next if hb else headA
+        return ha
 ```
 时间复杂度 :O(m+n)。
 空间复杂度 :(1)。
@@ -389,21 +389,21 @@ A和B要从距离末尾同等距离的位置开始遍历，才能相交。这个
 遍历链表 A 并将每个结点的地址/引用存储在哈希表中。然后检查链表 B 中的每一个结点bi
 是否在哈希表中。若在，则bi为相交结点。
 ```python
-    class Solution(object):
-        def getIntersectionNode(self, headA, headB):
-            visited = set()
-            
-            ha = headA
-            while ha:
-                visited.add(ha)
-                ha = ha.next
-            
-            hb = headB
-            while hb:
-                if hb in visited:
-                    return hb
-                hb = hb.next
-            return None
+class Solution(object):
+    def getIntersectionNode(self, headA, headB):
+        visited = set()
+        
+        ha = headA
+        while ha:
+            visited.add(ha)
+            ha = ha.next
+        
+        hb = headB
+        while hb:
+            if hb in visited:
+                return hb
+            hb = hb.next
+        return None
 ```
 复杂度分析
 
@@ -430,25 +430,25 @@ A和B要从距离末尾同等距离的位置开始遍历，才能相交。这个
     - 如果两个链表都是空的，那么过程终止，所以递归过程最终一定会终止。
 
 ```python
-    # Definition for singly-linked list.
-    # class ListNode:
-    #     def __init__(self, x):
-    #         self.val = x
-    #         self.next = None
-    
-    class Solution:
-        def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-            if l1 == None:
-                return l2
-            if l2 == None:
-                return l1
-            
-            if l1.val < l2.val:
-                l1.next = self.mergeTwoLists(l1.next, l2)
-                return l1
-            else:
-                l2.next = self.mergeTwoLists(l2.next, l1)
-                return l2
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        if l1 == None:
+            return l2
+        if l2 == None:
+            return l1
+        
+        if l1.val < l2.val:
+            l1.next = self.mergeTwoLists(l1.next, l2)
+            return l1
+        else:
+            l2.next = self.mergeTwoLists(l2.next, l1)
+            return l2
 ```
 复杂度分析
 
@@ -464,23 +464,23 @@ A和B要从距离末尾同等距离的位置开始遍历，才能相交。这个
 
 [Aug-27-2019_11-18-28-0c3ad7cb-623c-474b-8977-49207dbf83f8.mp4](Aug-27-2019_11-18-28-0c3ad7cb-623c-474b-8977-49207dbf83f8.mp4)
 ```python
-    # Definition for singly-linked list.
-    # class ListNode:
-    #     def __init__(self, x):
-    #         self.val = x
-    #         self.next = None
-    
-    class Solution:
-        def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-            dummy_head = tail = ListNode(-1)
-            while l1 and l2:
-                if l1.val < l2.val:
-                    tail.next, l1 = l1, l1.next
-                else:
-                    tail.next, l2 = l2, l2.next
-                tail = tail.next # 记得tail要往下走
-            tail.next = l1 or l2 # 把剩余不为空的加进去
-            return dummy_head.next
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        dummy_head = tail = ListNode(-1)
+        while l1 and l2:
+            if l1.val < l2.val:
+                tail.next, l1 = l1, l1.next
+            else:
+                tail.next, l2 = l2, l2.next
+            tail = tail.next # 记得tail要往下走
+        tail.next = l1 or l2 # 把剩余不为空的加进去
+        return dummy_head.next
 ```
 复杂度分析
 
@@ -510,40 +510,40 @@ A和B要从距离末尾同等距离的位置开始遍历，才能相交。这个
 通过使用PriorityQueue，降低选择最小值的时间复杂度。
 
 ```python
-    # Definition for singly-linked list.
-    # class ListNode(object):
-    #     def __init__(self, x):
-    #         self.val = x
-    #         self.next = None
-    
-    from Queue import PriorityQueue
-    
-    class Solution(object):
-        def mergeKLists(self, lists):
-            """
-            :type lists: List[ListNode]
-            :rtype: ListNode
-            """
-            head = ListNode(-1)
-            dummy_head = head
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+from Queue import PriorityQueue
+
+class Solution(object):
+    def mergeKLists(self, lists):
+        """
+        :type lists: List[ListNode]
+        :rtype: ListNode
+        """
+        head = ListNode(-1)
+        dummy_head = head
+        
+        q = PriorityQueue()
+        
+        for l in lists:
+            if l:
+                q.put((l.val, l))
+        
+        while not q.empty():
+            val, node = q.get()
+        
+            head.next = ListNode(val)
+            head = head.next
             
-            q = PriorityQueue()
-            
-            for l in lists:
-                if l:
-                    q.put((l.val, l))
-            
-            while not q.empty():
-                val, node = q.get()
-            
-                head.next = ListNode(val)
-                head = head.next
-                
-                node = node.next
-                if node:
-                    q.put((node.val, node))
-            
-            return dummy_head.next
+            node = node.next
+            if node:
+                q.put((node.val, node))
+        
+        return dummy_head.next
 ```
 ![](/assets/img/linkedlist/Untitled-c1d926d8-a3f2-40cb-82c2-0778684fcffc.png)
 
@@ -560,20 +560,20 @@ A和B要从距离末尾同等距离的位置开始遍历，才能相交。这个
 
 代码
 ```python
-    class Solution:
-        def isPalindrome(self, head: ListNode) -> bool:
-            slow,fast,prev = head,head,None
-            while fast is not None:
-                slow = slow.next
-                fast = fast.next.next if fast.next is not None else fast.next
-            while slow is not None:
-                slow.next, slow, prev= prev, slow.next, slow
-            while head and prev:
-                if head.val != prev.val:
-                    return False
-                head = head.next
-                prev = prev.next
-            return True
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        slow,fast,prev = head,head,None
+        while fast is not None:
+            slow = slow.next
+            fast = fast.next.next if fast.next is not None else fast.next
+        while slow is not None:
+            slow.next, slow, prev= prev, slow.next, slow
+        while head and prev:
+            if head.val != prev.val:
+                return False
+            head = head.next
+            prev = prev.next
+        return True
 ```
 作者：jimmy00745
 链接：[https://leetcode-cn.com/problems/palindrome-linked-list/solution/xing-shu-ji-jian-kuai-man-zhi-zhen-fan-zhuan-lian-/](https://leetcode-cn.com/problems/palindrome-linked-list/solution/xing-shu-ji-jian-kuai-man-zhi-zhen-fan-zhuan-lian-/)
@@ -631,26 +631,26 @@ class Solution:
 ![](/assets/img/linkedlist/Untitled-805eaf27-52ec-4732-b651-a7af42f2e74c.png)
 
 ```python
-    # Definition for singly-linked list.
-    # class ListNode:
-    #     def __init__(self, x):
-    #         self.val = x
-    #         self.next = None
-    
-    class Solution:
-        def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
-            dummy = ListNode(-1)
-            dummy.next = head
-            s, f = dummy,dummy
-            
-            for i in range(n+1):
-                f = f.next
-            
-            while f:
-                s, f = s.next, f.next
-            
-            s.next = s.next.next
-            return dummy.next
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+        dummy = ListNode(-1)
+        dummy.next = head
+        s, f = dummy,dummy
+        
+        for i in range(n+1):
+            f = f.next
+        
+        while f:
+            s, f = s.next, f.next
+        
+        s.next = s.next.next
+        return dummy.next
 ```
 
 时间复杂度：O(n)
