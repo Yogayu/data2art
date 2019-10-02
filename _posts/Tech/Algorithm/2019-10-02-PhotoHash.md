@@ -9,10 +9,10 @@ category: Tech
 author: 游薪渝
 tags: [Algorithm, iOS]
 bio: '去创造，去体验。<br> To create, To experience.'
-cover: /assets/img/HashPhoto/0.png
+cover: /assets/img/HashPhoto/0.jpeg
 ---
 
-<img src="/assets/img/HashPhoto/0.png" height="600">
+<img src="/assets/img/HashPhoto/0.jpeg" height="600">
 
 在我们最新做的App中，有一个自动找出相似照片并展示的功能。其中，相似照片的查找就是使用的感知哈希算法。那么什么是感知哈希算法？其原理又是什么呢？
 
@@ -140,7 +140,11 @@ PHash算法可分为以下几个步骤：
 
 ## 三者比较
 
-[三者比较](https://www.notion.so/a4509cc5ab9b4246b0e1175ae170aa5e)
+| Name  | Performance | Quality   |
+| ----- | ----------- | --------- |
+| aHash | good        | bad       |
+| dHash | excellent   | good      |
+| pHash | bad         | excellent |
 
 考虑到移动端性能，我们使用时是用的 dHash 算法，主要库为 CocoaImageHashing。另外，根据实际使用情况看来，dHash 只需要向相似度阈值设高（目前我们设置为8），效果很好。
 
