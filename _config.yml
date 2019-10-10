@@ -28,7 +28,7 @@ avatar: '/assets/img/profile.jpg'
 qrcode: '/assets/img/qrcode.jpg'
 
 # qrcode
-qr: true
+qr: false
 
 # Search
 search: true
